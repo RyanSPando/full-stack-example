@@ -9,7 +9,7 @@
 
     // *** register routes *** //
     app.use('/', routes);
-
+    app.use('/contacts', routes);
   };
 
 })(module.exports);

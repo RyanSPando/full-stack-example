@@ -1,0 +1,32 @@
+{% extends "_base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+  <div class="container">
+    <h1>contacts</h1>
+
+    <table class="table">
+  {% for index in contactsObject %}
+  {% if loop.first %}
+  <thead>
+    <th><strong>first_name </strong></td>
+    <th><strong>last_name </strong></td>
+    <th><strong>date_of_birth</strong></td>
+    <th><strong>eye_color</strong></td>
+    <th><strong>telephone_number </strong></td>
+  </thead>
+  {% endif %}
+  <tr>
+    <td>{{ index.first_name }}</td>
+    <td>{{ index.last_name }}</td>
+    <td>{{ index.date_of_birth}}</td>
+    <td>{{ index.eye_color}}</td>
+    <td>{{ index.telephone_number }}</td>
+  </tr>
+  {% endfor %}
+  </table>
+  </div>
+
+{% endblock %}
